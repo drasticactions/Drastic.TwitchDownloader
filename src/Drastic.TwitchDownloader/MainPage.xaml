@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Drastic.TwitchDownloader.MainPage">
+
+    <ScrollView>
+        <Grid Margin="10" RowSpacing="10" RowDefinitions="Auto, *">
+            <Grid HorizontalOptions="Fill" ColumnSpacing="10" ColumnDefinitions="*, Auto">
+                <Entry Placeholder="Enter a Twitch URL" Text="{Binding TwitchUri, Mode=TwoWay}" />
+                <Button Grid.Column="1" Command="{Binding GetInfoCommand}" CommandParameter="{Binding TwitchUri}" Text="Get Info"/>
+            </Grid>
+            <Grid RowSpacing="10" RowDefinitions="Auto, Auto, *, Auto" Grid.Row="1">
+                <Grid ColumnSpacing="10" ColumnDefinitions="Auto, *">
+                    <Border BackgroundColor="Red" WidthRequest="320" HeightRequest="180" StrokeShape="RoundRectangle 10">
+                        <Image  Source="dotnet_bot.png" />
+                    </Border>
+                    <VerticalStackLayout VerticalOptions="Center" Grid.Column="1">
+                        <Label FontSize="Caption" Text="Streamer:"/>
+                        <Label Text="Test 2"/>
+                        <Label FontSize="Caption" Text="Created:"/>
+                        <Label Text="Test 2"/>
+                        <Label FontSize="Caption" Text="Title:"/>
+                        <Label Text="Test 2"/>
+                        <Label FontSize="Caption" Text="Length:"/>
+                        <Label Text="Test 2"/>
+                    </VerticalStackLayout>
+                </Grid>
+                <Grid  Grid.Row="1">
+                    <VerticalStackLayout Spacing="10">
+                        <VerticalStackLayout Spacing="10">
+                            <Label FontSize="Caption" Text="Picker:"/>
+                            <Picker></Picker>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout Spacing="10">
+                            <Label FontSize="Caption" Text="Crop Video:"/>
+                            <Grid ColumnDefinitions="30, Auto, Auto, Auto, Auto" ColumnSpacing="10">
+                                <Label FontSize="Caption" VerticalOptions="Center" Text="Start: "/> 
+                                <CheckBox Grid.Column="1" />
+                                <Entry Grid.Column="2" Keyboard="Numeric" />
+                                <Entry Grid.Column="3" Keyboard="Numeric" />
+                                <Entry Grid.Column="4" Keyboard="Numeric" />
+                            </Grid>
+                            <Grid ColumnDefinitions="30, Auto, Auto, Auto, Auto" ColumnSpacing="10">
+                                <Label FontSize="Caption" VerticalOptions="Center" Text="End: "/>
+                                <CheckBox Grid.Column="1" />
+                                <Entry Grid.Column="2" Keyboard="Numeric" />
+                                <Entry Grid.Column="3" Keyboard="Numeric" />
+                                <Entry Grid.Column="4" Keyboard="Numeric" />
+                            </Grid>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Grid>
+                <Button Grid.Row="3" Text="Download" />
+            </Grid>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
