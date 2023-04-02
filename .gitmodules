@@ -1,0 +1,3 @@
+[submodule "external/TwitchDownloader"]
+	path = external/TwitchDownloader
+	url = git@github.com:drasticactions/TwitchDownloader.git
