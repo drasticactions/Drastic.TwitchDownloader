@@ -10,7 +10,7 @@ public partial class AppShell : Shell
     {
         this.InitializeComponent();
 
-#if WINDOWS || MACCATALYST
+#if WINDOWS
         this.FlyoutBehavior = FlyoutBehavior.Locked;
 #endif
     }
