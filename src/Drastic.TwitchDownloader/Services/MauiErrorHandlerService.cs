@@ -15,7 +15,7 @@ namespace Drastic.TwitchDownloader.Services
         /// <inheritdoc/>
         public void HandleError(Exception ex)
         {
-            Debugger.Break();
+           // Debugger.Break();
         }
     }
 }
